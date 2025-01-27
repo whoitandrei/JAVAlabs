@@ -1,9 +1,12 @@
 package model;
+import model.interfaces.IGameProcess;
+
 import java.util.*;
 
-public class GameProcess {
-    GameProcess() {} //package-private constructor
+public class GameProcess implements IGameProcess {
+    public GameProcess() {}
 
+    @Override
     public void playGame(){
         Scanner in = new Scanner(System.in);
         final int[] NUMBER = createNumber();
