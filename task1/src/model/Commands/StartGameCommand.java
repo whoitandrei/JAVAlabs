@@ -1,8 +1,7 @@
-package model;
+package model.Commands;
 
-import model.interfaces.ICommand;
-import model.interfaces.IGameProcess;
-import model.interfaces.IScreenCleaner;
+import model.gameprocess.IGameProcess;
+import model.screencleaner.IScreenCleaner;
 
 public class StartGameCommand implements ICommand {
     private final IGameProcess gameProcess;

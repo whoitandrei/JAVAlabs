@@ -1,7 +1,6 @@
-package model;
+package model.Commands;
 
-import model.interfaces.ICommand;
-import model.interfaces.IScreenCleaner;
+import model.screencleaner.IScreenCleaner;
 
 public class ExitCommand implements ICommand {
     private final IScreenCleaner screenCleaner;

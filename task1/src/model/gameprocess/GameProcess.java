@@ -1,5 +1,4 @@
-package model;
-import model.interfaces.IGameProcess;
+package model.gameprocess;
 
 import java.util.*;
 

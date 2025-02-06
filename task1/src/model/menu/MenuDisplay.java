@@ -1,8 +1,7 @@
-package model;
+package model.menu;
 
-import model.interfaces.ICommand;
-import model.interfaces.IMenuDisplay;
-import model.interfaces.IScreenCleaner;
+import model.Commands.ICommand;
+import model.screencleaner.IScreenCleaner;
 
 import java.util.Map;
 import java.util.Scanner;

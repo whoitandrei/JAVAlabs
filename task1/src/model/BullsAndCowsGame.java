@@ -1,7 +1,8 @@
 package model;
 
-import model.interfaces.ICommand;
-import model.interfaces.IMenuDisplay;
+import model.Commands.ExitCommand;
+import model.Commands.ICommand;
+import model.menu.IMenuDisplay;
 
 public class BullsAndCowsGame {
     private final IMenuDisplay menuDisplay;

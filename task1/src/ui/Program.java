@@ -1,10 +1,16 @@
 package ui;
 
 import model.*;
-import model.interfaces.ICommand;
-import model.interfaces.IGameProcess;
-import model.interfaces.IMenuDisplay;
-import model.interfaces.IScreenCleaner;
+import model.Commands.DisplayHelpCommand;
+import model.Commands.ExitCommand;
+import model.Commands.ICommand;
+import model.Commands.StartGameCommand;
+import model.gameprocess.GameProcess;
+import model.gameprocess.IGameProcess;
+import model.menu.IMenuDisplay;
+import model.screencleaner.IScreenCleaner;
+import model.menu.MenuDisplay;
+import model.screencleaner.ScreenCleaner;
 
 import java.util.HashMap;
 import java.util.Map;

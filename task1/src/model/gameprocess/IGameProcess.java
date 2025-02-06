@@ -1,4 +1,4 @@
-package model.interfaces;
+package model.gameprocess;
 
 public interface IGameProcess {
     void playGame();

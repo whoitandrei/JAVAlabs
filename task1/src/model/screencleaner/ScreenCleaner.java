@@ -1,6 +1,4 @@
-package model;
-
-import model.interfaces.IScreenCleaner;
+package model.screencleaner;
 
 public class ScreenCleaner implements IScreenCleaner {
     public void clearScreen() {
