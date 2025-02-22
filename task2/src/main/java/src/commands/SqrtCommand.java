@@ -17,6 +17,8 @@ public class SqrtCommand extends Command{
         }
 
         double operand = stack.pop();
+        if (operand < 0) throw new CommandException("number is < 0! cannot apply sqrt");
+
         double result = sqrt(operand);
         stack.push(result);
     }
