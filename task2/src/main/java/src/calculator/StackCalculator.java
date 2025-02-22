@@ -30,7 +30,7 @@ public class StackCalculator {
             });
 
             FileHandler fileHandler = new FileHandler("log.txt", true);
-            fileHandler.setLevel(Level.ALL); // Логируем всё
+            fileHandler.setLevel(Level.ALL);
             fileHandler.setFormatter(new SimpleFormatter());
 
             logger.addHandler(consoleHandler);
