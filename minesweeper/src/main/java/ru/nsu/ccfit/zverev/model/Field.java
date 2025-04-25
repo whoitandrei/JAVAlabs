@@ -11,6 +11,9 @@ public class Field {
     private final int MINES_COUNT;
     private Random random = new Random();
 
+    public final int HEIGHT_LIMIT = 23;
+    public final int WIDTH_LIMIT = 46;
+
     public Field(int HEIGHT, int WIDTH, float DIFFICULTY) {
         this.HEIGHT = HEIGHT;
         this.WIDTH = WIDTH;
@@ -26,6 +29,10 @@ public class Field {
                 field[i][j] = new Cell(false, false, (short) 0);
             }
         }
+    }
+
+    public boolean isValidSize(int h, int w) {
+        return (h <= HEIGHT_LIMIT && w <= WIDTH_LIMIT);
     }
 
     public void initFieldMinesCount () {
