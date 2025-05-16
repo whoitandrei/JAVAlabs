@@ -79,11 +79,7 @@ public class GraphicalView extends JFrame {
         newGameButton.addActionListener(e -> restartGame());
         buttonPanel.add(newGameButton);
 
-        JButton changeSettingsButton = new JButton("Change Settings");
-        changeSettingsButton.addActionListener(e -> {
-            changeSettings();
-            restartGame();
-        });
+        JButton changeSettingsButton = getJButtonChangeSettings();
         buttonPanel.add(changeSettingsButton);
 
         JButton highScoresButton = new JButton("High Scores");
@@ -99,6 +95,20 @@ public class GraphicalView extends JFrame {
         buttonPanel.add(exitButton);
 
         return buttonPanel;
+    }
+
+    private JButton getJButtonChangeSettings() {
+        JButton changeSettingsButton = new JButton("Change Settings");
+        changeSettingsButton.addActionListener(e -> {
+            changeSettings();
+            if (!controller.getField().isValidSize(height, width)) {
+                height = 5;
+                width = 5;
+                JOptionPane.showMessageDialog(this, "very big height or width! try height <= 23 and width <= 46! [game will start with 5x5 field]", "Error!", JOptionPane.INFORMATION_MESSAGE);
+            }
+            restartGame();
+        });
+        return changeSettingsButton;
     }
 
     private void changeSettings() {
